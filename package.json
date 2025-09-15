@@ -9,6 +9,7 @@
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "format": "biome check --write .",
+    "format:check": "biome check .",
     "biome:fix": "biome check --write .",
     "biome:check": "biome check .",
     "test": "jest",
