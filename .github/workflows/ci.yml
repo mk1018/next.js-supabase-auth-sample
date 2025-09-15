@@ -1,0 +1,30 @@
+name: CI
+on:
+  push:
+
+jobs:
+  ci:
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        node-version: [20]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run lint
+        run: npm run lint
+
+      - name: Run format check
+        run: npm run format:check
+
+      # - name: Run test
+      #   run: npm run test
+
+      # - name: Setup build environment
+      #   run: cp .env.ci.build .env.local
+
+      # - name: Run build
+      #   run: npm run build
