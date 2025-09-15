@@ -17,9 +17,9 @@ export async function GET(request: NextRequest) {
 
   if (code) {
     const supabase = await createClient();
-    
+
     const { error } = await supabase.auth.exchangeCodeForSession(code);
-    
+
     if (!error) {
       return NextResponse.redirect(redirectTo);
     }
@@ -32,7 +32,7 @@ export async function GET(request: NextRequest) {
       type,
       token_hash,
     });
-    
+
     if (!error) {
       redirectTo.searchParams.delete("next");
       return NextResponse.redirect(redirectTo);
