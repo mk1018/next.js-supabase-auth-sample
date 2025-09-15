@@ -79,5 +79,8 @@
     "tailwindcss": "^3.4.6",
     "ts-jest": "^29.2.5",
     "typescript": "^5.5.3"
+  },
+  "optionalDependencies": {
+    "@biomejs/cli-linux-x64": "^1.8.3"
   }
 }
