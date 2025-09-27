@@ -11,11 +11,10 @@ export async function middleware(request: NextRequest) {
   try {
     const session = await updateSession(request);
     if (request.nextUrl.pathname === "/login") {
-      const url = new URL("/", request.url);
+      const url = new URL("/dashboard", request.url);
       url.search = request.nextUrl.search;
       return NextResponse.redirect(url);
     }
-
     return session;
   } catch (error) {
     console.warn("Error updating session:", error);
