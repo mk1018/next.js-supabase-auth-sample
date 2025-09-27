@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "LINE CRM",
-  description: "LINE CRM with Supabase Auth",
+  title: "next.js + supabase + line crm",
+  description: "A simple project using next.js, supabase and line crm",
 };
 
 export default function RootLayout({
