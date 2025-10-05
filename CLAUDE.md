@@ -29,7 +29,7 @@
 
 ## アーキテクチャ
 
-```
+```bash
 src/
 ├── domain/              # ドメイン層
 │   └── repositories/    # リポジトリインターフェース
@@ -60,7 +60,7 @@ src/
 └── __test__/            # テスト
 ```
 
-```
+```bash
 supabase/            # Supabase
 ├── migrations/
 └── config.toml
@@ -74,14 +74,14 @@ supabase/            # Supabase
 - Docker
 - Supabase CLI
 
-# 必須要件
+## 必須要件
 
-## Supabaseのキーについて
+### Supabaseのキーについて
 
 NEXT_PUBLIC_SUPABASE_ANON_KEY：認証のみに使う、データベースへの接続には使用しない。
 SUPABASE_SERVICE_ROLE_KEY：データベースの接続、参照、追加、更新、削除のみに使う。
 
-## APIについて
+### APIについて
 
 - APIはuse-caseを呼ぶためのエントリーポイントのみを定義すること
 - APIでRepositoryのインスタンスを作成し、constructorでuse-caseに渡すこと
@@ -95,18 +95,18 @@ usecase = UserUsecase(
 
 - usecaseでログインユーザーのチェックを行うこと
 
-## 型補正について
+### 型補正について
 
 `as`を使っての型補正は禁止です、適切な型定義とtype guardを使うこと。
 `as any`は禁止です。
 `unkown`も禁止です。（設計上必須の場合のみ使用可能です）
 
-## Userについて
+### Userについて
 
 - Userテーブルは作成しないこと。
 - SupabaseのデフォルトAuthUserテーブルを利用すること。
 
-## データベースについて
+### データベースについて
 
 - migrationsファイルはsupabaseのCLIで作成すること
 
@@ -120,18 +120,18 @@ supabase migration new create_customers_table
   @/infrastructure/database/supabase/admin.ts
 - RLSは設定する必要ありません。
 
-## Supabase認証について
+### Supabase認証について
 
 フロントエンド: @/infrastructure/database/supabase/client.ts
 サーバーサイド: @/infrastructure/database/supabase/server.ts
 Middleware: @/infrastructure/database/supabase/middleware.ts
 ANONキーを使用すること。
 
-## テストコードについて
+### テストコードについて
 
 - use-caseは必ずテストコードを作成すること
 
-## コードを修正した場合は必ず以下を実行すること
+### コードを修正した場合は必ず以下を実行すること
 
 必ず一つずつ進め、エラーが発生したら解決してから次に進むこと
 
@@ -141,11 +141,11 @@ ANONキーを使用すること。
 4. npm run build
    一つでも失敗した場合は必ずコードを修正すること
 
-## ログについて
+### ログについて
 
 - console.logは必ず削除すること。（エラーハンドリングにおけるconsole.error, console.warningは許可する）
 - デバッグ用に一時的に作成することのみ許可する。
 
-## PR説明作成
+### PR説明作成
 
 `.github/PULL_REQUEST_TEMPLATE.md` に沿ってPRに記載する内容を `.pr-template.md` に記載してください。
