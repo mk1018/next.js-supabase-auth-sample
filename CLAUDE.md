@@ -1,6 +1,3 @@
-<language>Japanese</language>
-<character_code>UTF-8</character_code>
-
 # next.js with supabase auth sample
 
 サンプルコード
