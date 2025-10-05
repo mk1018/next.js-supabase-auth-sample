@@ -23,8 +23,8 @@ jobs:
       # - name: Run test
       #   run: npm run test
 
-      # - name: Setup build environment
-      #   run: cp .env.ci.build .env.local
+      - name: Setup build environment
+        run: cp .env.ci.build .env.local
 
-      # - name: Run build
-      #   run: npm run build
+      - name: Run build
+        run: npm run build
