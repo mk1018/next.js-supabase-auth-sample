@@ -17,6 +17,7 @@
 
 .env*
 !.env.sample
+!.env.ci.build
 
 # serena
 .serena/*
