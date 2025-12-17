@@ -2,15 +2,15 @@ import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
 
 export async function createClient() {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const serviceSecretKey = process.env.SUPABASE_SECRET_KEY;
 
-  if (!url || !serviceRoleKey) {
+  if (!url || !serviceSecretKey) {
     throw new Error("Missing Supabase environment variables");
   }
 
-  return createServerClient(url, serviceRoleKey, {
+  return createServerClient(url, serviceSecretKey, {
     cookies: {
       getAll() {
         return cookieStore.getAll();

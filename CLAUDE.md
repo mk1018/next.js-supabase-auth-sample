@@ -76,7 +76,7 @@ supabase/            # Supabase
 ### Supabaseのキーについて
 
 NEXT_PUBLIC_SUPABASE_ANON_KEY：認証のみに使う、データベースへの接続には使用しない。
-SUPABASE_SERVICE_ROLE_KEY：データベースの接続、参照、追加、更新、削除のみに使う。
+SUPABASE_SECRET_KEY：データベースの接続、参照、追加、更新、削除のみに使う。
 
 ### APIについて
 

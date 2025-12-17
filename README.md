@@ -10,7 +10,7 @@ Next.js + Supabase Authで認証機能を実装するサンプルです。
 ### キーの使い方
 
 `NEXT_PUBLIC_SUPABASE_ANON_KEY` は全てのデータベースの操作権限を剥奪し認証のみで利用
-`SUPABASE_SERVICE_ROLE_KEY` を使いAPI経由でデータベースの参照、更新を行う
+`SUPABASE_SECRET_KEY` を使いAPI経由でデータベースの参照、更新を行う
 
 ### Migrationについて
 
@@ -41,7 +41,7 @@ Supabaseの起動で表示されたURLとANONキー、サービスロールキ�
 ```plaintext
 NEXT_PUBLIC_SUPABASE_URL=http://localhost:54322
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
+SUPABASE_SECRET_KEY=your_supabase_secret_key
 ```
 
 ### サーバー起動

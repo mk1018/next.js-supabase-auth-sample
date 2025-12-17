@@ -1,7 +1,7 @@
 import { updateSession } from "@/src/infrastructure/database/supabase/middleware";
 import { type NextRequest, NextResponse } from "next/server";
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   // 除外するパスのリスト
   const excludedPaths = ["/api/"];
   if (excludedPaths.some((path) => request.nextUrl.pathname.startsWith(path))) {
