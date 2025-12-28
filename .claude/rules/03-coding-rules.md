@@ -23,10 +23,10 @@
 
 ## コード修正時の必須手順
 
-1. npm run format
-2. npm run lint:fix
-3. npm run test
-4. npm run build
+1. pnpm format
+2. pnpm lint
+3. pnpm test
+4. pnpm build
 
 エラー発生時は解決してから次へ進む。
 
