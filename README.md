@@ -9,7 +9,7 @@ Next.js + Supabase Authで認証機能を実装するサンプルです。
 
 ### キーの使い方
 
-`NEXT_PUBLIC_SUPABASE_ANON_KEY` は全てのデータベースの操作権限を剥奪し認証のみで利用
+`NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` は全てのデータベースの操作権限を剥奪し認証のみで利用
 `SUPABASE_SECRET_KEY` を使いAPI経由でデータベースの参照、更新を行う
 
 ### Migrationについて
