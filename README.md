@@ -40,7 +40,7 @@ Supabaseの起動で表示されたURLとANONキー、サービスロールキ�
 
 ```plaintext
 NEXT_PUBLIC_SUPABASE_URL=http://localhost:54322
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_publishable_key
 SUPABASE_SECRET_KEY=your_supabase_secret_key
 ```
 
