@@ -31,7 +31,8 @@
       "dist/**",
       "build/**",
       "*.min.js",
-      "coverage/**"
+      "coverage/**",
+      ".claude/**"
     ]
   }
 }
