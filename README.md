@@ -23,7 +23,7 @@ Supabaseのデフォルトの設定では、ANONキーでデータベースの�
 ### 依存関係のインストール
 
 ```bash
-npm install
+pnpm install
 ```
 
 ### Supabaseの起動
@@ -47,5 +47,5 @@ SUPABASE_SECRET_KEY=your_supabase_secret_key
 ### サーバー起動
 
 ```bash
-npm run dev
+pnpm dev
 ```

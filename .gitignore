@@ -16,7 +16,7 @@
 /build
 
 .env*
-!.env.sample
+!.env.example
 !.env.default
 
 # serena
