@@ -1,5 +1,5 @@
 {
-  "name": "sample",
+  "name": "next.js-supabase-auth-sample",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -14,8 +14,7 @@
     "biome:check": "biome check .",
     "test": "jest",
     "test:watch": "jest --watch",
-    "supabase:generate:schema": "supabase gen types --lang=typescript --local > src/infrastructure/database/schema.ts",
-    "add-user-to-org": "node scripts/add-user-to-org.js"
+    "supabase:generate:schema": "supabase gen types --lang=typescript --local > src/infrastructure/database/schema.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.24.3",

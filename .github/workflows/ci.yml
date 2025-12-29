@@ -24,7 +24,7 @@ jobs:
       #   run: npm run test
 
       - name: Setup build environment
-        run: cp .env.default .env.local
+        run: cp .env.example .env.local
 
       - name: Run build
         run: npm run build
