@@ -13,7 +13,7 @@
 
 ## データベース
 
-- 接続はサーバーサイドのSupabaseAdmin（@/infrastructure/database/supabase/admin.ts）で行う
+- 接続はサーバーサイドのSupabaseAdmin（@/infrastructure/database/supabase/server.ts）で行う
 - RLSは設定不要
 - Userテーブルは作成しない（SupabaseデフォルトのAuthUserを利用）
 - migrationsはSupabase CLIで作成: `supabase migration new <ファイル名>`

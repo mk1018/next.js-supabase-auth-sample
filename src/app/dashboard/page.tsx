@@ -1,3 +1,4 @@
+import { UserProfileForm } from "@/src/components/UserProfileForm";
 import { createClient } from "@/src/infrastructure/database/supabase/server";
 import { redirect } from "next/navigation";
 
@@ -39,12 +40,13 @@ export default async function DashboardPage() {
       </header>
       <main>
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-          <div className="rounded-lg bg-white px-5 py-6 shadow sm:px-6">
+          <div className="rounded-lg bg-white px-5 py-6 shadow sm:px-6 mb-6">
             <h2 className="text-lg font-medium text-gray-900">Welcome!</h2>
             <p className="mt-1 text-sm text-gray-600">
               You are signed in as: {user.email}
             </p>
           </div>
+          <UserProfileForm />
         </div>
       </main>
     </div>
