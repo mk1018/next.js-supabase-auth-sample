@@ -22,8 +22,8 @@ jobs:
       - name: Run format check
         run: npm run format:check
 
-      # - name: Run test
-      #   run: npm run test
+      - name: Run test
+        run: npm run test
 
       - name: Setup build environment
         run: cp .env.example .env.local
