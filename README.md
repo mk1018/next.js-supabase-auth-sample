@@ -15,7 +15,7 @@ Next.js + Supabase Authで認証機能を実装するサンプルです。
 ### Migrationについて
 
 Supabaseのデフォルトの設定では、ANONキーでデータベースの参照、更新が可能なためです。
-これをそのまま公開するわけにはいきません。
+これをそのまま公開するわけにはいきません。しかしテーブル一つ一つにRLSポリシーを設定するのはやってられないです。
 そのため、`20250726100854_revoke_anon_privileges.sql`でANONキーのデータベース操作権限を剥奪しています。
 
 ## 使い方
@@ -36,11 +36,11 @@ supabase start
 
 `.env.local`を作成し、以下の環境変数を設定します。
 
-Supabaseの起動で表示されたURLとANONキー、サービスロールキーを設定してください。
+Supabaseの起動で表示されたURLとPUBLISHABLEキー、サービスロールキーを設定してください。
 
 ```plaintext
 NEXT_PUBLIC_SUPABASE_URL=http://localhost:54322
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_publishable_key
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=your_supabase_publishable_key
 SUPABASE_SECRET_KEY=your_supabase_secret_key
 ```
 
