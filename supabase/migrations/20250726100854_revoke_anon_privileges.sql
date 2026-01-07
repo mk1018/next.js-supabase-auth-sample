@@ -25,3 +25,29 @@ NOTIFY pgrst, 'reload config';
 --   TO anon
 --   USING (false);
 -- =============================================================================
+
+-- =============================================================================
+-- 別案: anonの権限をすべて剥奪する場合
+-- =============================================================================
+-- REVOKE all privileges ON SCHEMA public
+-- FROM
+--   anon;
+
+-- REVOKE all privileges ON all tables IN SCHEMA public
+-- FROM
+--   anon;
+
+-- ALTER DEFAULT privileges IN SCHEMA public
+-- REVOKE all ON tables
+-- FROM
+--   anon;
+
+-- ALTER DEFAULT privileges IN SCHEMA public
+-- REVOKE all ON functions
+-- FROM
+--   anon;
+
+-- ALTER DEFAULT privileges IN SCHEMA public
+-- REVOKE all ON sequences
+-- FROM
+--   anon;
