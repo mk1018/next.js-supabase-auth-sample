@@ -20,6 +20,7 @@
 
 - 外部依存（Supabase、APIなど）は jest.mock でモック化
 - モック関数は describe ブロックの外で定義
+
   ```typescript
   const mockGetUser = jest.fn();
 
