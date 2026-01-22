@@ -2,8 +2,8 @@
 
 ## キー
 
-- NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY：認証のみ。DBへの接続には使用しない。
-- SUPABASE_SECRET_KEY：DB操作（接続、参照、追加、更新、削除）のみ。
+- NEXT_PUBLIC_SUPABASE_ANON_KEY：認証のみ。DBへの接続には使用しない。
+- SUPABASE_SERVICE_ROLE_KEY：DB操作（接続、参照、追加、更新、削除）のみ。
 
 ## 認証クライアント
 
