@@ -86,10 +86,12 @@ describe("anon key アクセス制限テスト", () => {
 
 describe("anon key 認証機能テスト", () => {
   const anonClient = createAnonClient();
+  const adminClient = createAdminClient();
 
   test("signUp APIにアクセスできる", async () => {
-    const { error } = await anonClient.auth.signUp({
-      email: `test-${Date.now()}@example.com`,
+    const testEmail = `test-${Date.now()}@example.com`;
+    const { data, error } = await anonClient.auth.signUp({
+      email: testEmail,
       password: "testpassword123",
     });
     // エラーがないか、rate limitエラーであることを確認（認証API自体は動作している）
@@ -99,6 +101,11 @@ describe("anon key 認証機能テスト", () => {
         error.message.includes("Email") ||
         error.message.includes("already")
     ).toBe(true);
+
+    // テストで作成したユーザーを削除
+    if (data?.user?.id) {
+      await adminClient.auth.admin.deleteUser(data.user.id);
+    }
   });
 
   test("signInWithPassword APIにアクセスできる", async () => {
@@ -111,7 +118,7 @@ describe("anon key 認証機能テスト", () => {
   });
 });
 
-describe("SECRET_KEY アクセステスト", () => {
+describe("SERVICE_ROLE_KEY アクセステスト", () => {
   const adminClient = createAdminClient();
 
   test("全publicテーブルにアクセスできる", async () => {
