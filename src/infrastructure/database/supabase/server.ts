@@ -4,7 +4,7 @@ import { cookies } from "next/headers";
 export async function createClient() {
   const cookieStore = await cookies();
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const serviceSecretKey = process.env.SUPABASE_SECRET_KEY;
+  const serviceSecretKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
   if (!url || !serviceSecretKey) {
     throw new Error("Missing Supabase environment variables");
