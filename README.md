@@ -7,6 +7,11 @@ Supabaseを使った認証のサンプル
 Next.js + Supabase Authで認証機能を実装するサンプルです。
 主に、ANONキーとサービスロールキーの使い分けを示しています。
 
+### レンダリング方式
+
+SSR（Server-Side Rendering）/ Server Components構成です。
+Next.js App Routerを使用し、データベース操作はサーバーサイドでのみ行います。
+
 ### キーの使い方
 
 `NEXT_PUBLIC_SUPABASE_ANON_KEY` は全てのデータベースの操作権限を剥奪し認証のみで利用
